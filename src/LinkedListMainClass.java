@@ -4,12 +4,12 @@ public class LinkedListMainClass {
     public static void main(String[] args) {
         System.out.println("Welecome to DSA problems");
 
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(56);
-        list.add(30);
-        list.add(70);
+      //  LinkedList<Integer> list = new LinkedList<>();
+        SinglyLinkedList list=new SinglyLinkedList();
+        list.addFirst(56);
+        list.addFirst(30);
+        list.addFirst(70);
 
-        System.out.println(list);
-
+        list.display();
     }
 }
