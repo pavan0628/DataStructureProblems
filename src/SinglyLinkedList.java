@@ -7,17 +7,22 @@ public class SinglyLinkedList {
 
     public void addFirst(Object data){
         Node node = new Node(data);
+        Node temp = head;
+        this.head = node;
+        node.next = temp;
+    }
+    public void addLast(Object data){
+        Node node = new Node(data);
         if(this.head == null)
         {
             this.head = node;
+            return;
         }
-        else {
-            Node temp = head;
-            while (temp.next != null) {
-                temp = temp.next;
-            }
-            temp.next = node;
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
         }
+        temp.next = node;
     }
     public void display(){
         Node temp = this.head;
