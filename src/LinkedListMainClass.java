@@ -9,9 +9,13 @@ public class LinkedListMainClass {
 //        list.addFirst(56);
 //        list.addFirst(30);
 //        list.addFirst(70);
+//        list.addLast(56);
+//        list.addLast(30);
+//        list.addLast(70);
+
         list.addLast(56);
-        list.addLast(30);
         list.addLast(70);
+        list.insertInBetween(30);
 
         list.display();
     }
