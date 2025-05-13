@@ -16,7 +16,8 @@ public class LinkedListMainClass {
         list.addLast(56);
         list.addLast(70);
         list.insertInBetween(30);
-
+        list.display();
+        list.deleteFirst();
         list.display();
     }
 }
