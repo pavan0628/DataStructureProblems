@@ -13,11 +13,17 @@ public class LinkedListMainClass {
 //        list.addLast(30);
 //        list.addLast(70);
 
+//        list.addLast(56);
+//        list.addLast(70);
+//        list.insertInBetween(30);
+//        list.display();
+//        list.pop();
+
         list.addLast(56);
+        list.addLast(30);
         list.addLast(70);
-        list.insertInBetween(30);
         list.display();
-        list.deleteFirst();
+        list.popLast();
         list.display();
     }
 }

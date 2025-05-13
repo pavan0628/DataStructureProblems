@@ -39,12 +39,24 @@ public class SinglyLinkedList {
         node.next = temp.next;
         temp.next = node;
     }
-    public void deleteFirst(){
+    public void pop(){
         if(head==null){
             System.out.println("The list is empty");
         }
         Node temp=head;
         head=temp.next;
+    }
+    public void popLast(){
+        if(head==null){
+            System.out.println("the list is empty");
+        }
+        Node temp=head;
+        Node previous=head;
+        while(temp.next!=null){
+            previous=temp;
+            temp=temp.next;
+        }
+        previous.next=null;
     }
 
     public int size(){
