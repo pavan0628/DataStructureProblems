@@ -96,6 +96,23 @@ public class SinglyLinkedList<E> {
         n.next=prev;
         return found;
     }
+    public boolean deleteData(E data){
+        Node temp=head;
+        Node prev=temp;
+        boolean isDeleted=false;
+        while(temp.next!=null){
+
+            if(temp.data==data){
+                isDeleted=true;
+                break;
+            }
+            prev=temp;
+            temp=temp.next;
+        }
+        prev.next=temp.next;
+        return isDeleted;
+    }
+
     public void display(){
         Node temp = this.head;
         if(temp == null) {
@@ -111,5 +128,6 @@ public class SinglyLinkedList<E> {
         }
         System.out.println(temp.data);
     }
+
 
 }

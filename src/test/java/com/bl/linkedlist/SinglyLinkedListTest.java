@@ -28,5 +28,9 @@ class SinglyLinkedListTest {
             assertTrue(list.insertDataAfterGivenKey(40,30),"40 should insert after 30");
         }
 
+        @Test
+        void deleteElementTest(){
+            assertTrue(list.deleteData(40),"40 should be deleted");
+        }
 
     }

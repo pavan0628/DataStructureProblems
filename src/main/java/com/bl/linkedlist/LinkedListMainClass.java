@@ -22,10 +22,14 @@ public class LinkedListMainClass {
 
         list.addLast(56);
         list.addLast(30);
+        list.addLast(40);
         list.addLast(70);
+        System.out.println("The size of list is: "+list.size());
         list.display();
 //        list.popLast();
-        list.insertDataAfterGivenKey(40,30);
+//        list.insertDataAfterGivenKey(40,30);
+        list.deleteData(40);
+        System.out.println("After deleting the size is: "+list.size());
         list.display();
     }
 }
