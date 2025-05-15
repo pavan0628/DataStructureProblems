@@ -1,11 +1,11 @@
 package com.bl.linkedlist;
 
-public class Node {
+public class Node<E> {
 
-    Object data;
-    Node next;
+    E data;
+    Node<E> next;
 
-    Node(Object data){
+    Node(E data){
         this.data=data;
     }
 }

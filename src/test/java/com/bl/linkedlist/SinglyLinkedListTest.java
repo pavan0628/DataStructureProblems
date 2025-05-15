@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SinglyLinkedListTest {
 
-
         static SinglyLinkedList list;
 
         @BeforeAll
@@ -22,6 +21,11 @@ class SinglyLinkedListTest {
         @Test
         void searchTest() {
             assertTrue(list.search(30),"30 should found");
+        }
+
+        @Test
+        void insertAfterKeyTest(){
+            assertTrue(list.insertDataAfterGivenKey(40,30),"40 should insert after 30");
         }
 
 

@@ -6,7 +6,7 @@ public class LinkedListMainClass {
         System.out.println("Welecome to DSA problems");
 
         //  LinkedList<Integer> list = new LinkedList<>();
-        SinglyLinkedList list=new SinglyLinkedList();
+        SinglyLinkedList<Integer> list=new SinglyLinkedList<>();
 //        list.addFirst(56);
 //        list.addFirst(30);
 //        list.addFirst(70);
@@ -24,7 +24,8 @@ public class LinkedListMainClass {
         list.addLast(30);
         list.addLast(70);
         list.display();
-        list.popLast();
+//        list.popLast();
+        list.insertDataAfterGivenKey(40,30);
         list.display();
     }
 }

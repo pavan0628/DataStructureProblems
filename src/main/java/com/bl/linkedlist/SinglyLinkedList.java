@@ -3,17 +3,17 @@ package com.bl.linkedlist;
 import java.util.Collection;
 import java.util.List;
 
-public class SinglyLinkedList {
+public class SinglyLinkedList<E> {
     Node head;
     Node next;
 
-    public void addFirst(Object data){
+    public void addFirst(E data){
         Node node = new Node(data);
         Node temp = head;
         this.head = node;
         node.next = temp;
     }
-    public void addLast(Object data){
+    public void addLast(E data){
         Node node = new Node(data);
         if(this.head == null)
         {
@@ -26,7 +26,7 @@ public class SinglyLinkedList {
         }
         temp.next = node;
     }
-    public void insertInBetween(Object data){
+    public void insertInBetween(E data){
         if(head == null)
         {
             System.out.println("no data in list");
@@ -70,8 +70,8 @@ public class SinglyLinkedList {
         }
         return size;
     }
-    public boolean search(Object data) {
-        Node temp = head;
+    public boolean search(E data) {
+        Node<E> temp = head;
         while (temp != null) {
             if (temp.data.equals(data))
                 return true;
@@ -80,6 +80,22 @@ public class SinglyLinkedList {
         return false;
     }
 
+    public boolean insertDataAfterGivenKey(E key,E searchData){
+        Node n=new Node(key);
+        Node temp=head;
+        boolean found=false;
+        while(temp.next!=null){
+            if(temp.data==searchData){
+                found=true;
+                break;
+            }
+            temp=temp.next;
+        }
+        Node prev=temp.next;
+        temp.next=n;
+        n.next=prev;
+        return found;
+    }
     public void display(){
         Node temp = this.head;
         if(temp == null) {
