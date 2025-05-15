@@ -3,7 +3,7 @@ package com.bl.linkedlist;
 import java.util.Collection;
 import java.util.List;
 
-public class SinglyLinkedList<E> {
+public class SinglyLinkedList<E extends Comparable<E>> {
     Node head;
     Node next;
 
@@ -111,6 +111,24 @@ public class SinglyLinkedList<E> {
         }
         prev.next=temp.next;
         return isDeleted;
+    }
+    void  sort(){
+        Node temp=head;
+        for(int i=0;i<size();i++){
+            while(temp.next!=null){
+
+                if(temp.data.compareTo(temp.next.data)>0){
+                    Comparable swap = temp.data;
+                    temp.data = temp.next.data;
+                    temp.next.data = swap;
+
+                }
+
+                temp=temp.next;
+            }
+        }
+
+
     }
 
     public void display(){
